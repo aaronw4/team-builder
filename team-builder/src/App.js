@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import TeamForm from './Form'
 
 function App() {
   const [team, setTeam] = useState([
@@ -33,6 +34,7 @@ function App() {
           </div>
         )})}
       </div>
+      <TeamForm/>
     </div>
   );
 }
