@@ -22,19 +22,21 @@ function App() {
   ])
 
   return (
-    <div className="App">
-      <h3> Team </h3>
+    <div className="App"> 
+      <div></div>
       <div>
-        {team.map(data => {
-          return(
-          <div>
-            <p>{data.name}</p>
-            <p>{data.email}</p>
-            <p>{data.role}</p>
-          </div>
-        )})}
-      </div>
+        <h3> Team </h3>
+          {team.map(data => {
+            return(
+            <div className='memberInfo'>
+              <p>{data.name}</p>
+              <p>{data.email}</p>
+              <p>{data.role}</p>
+            </div>
+          )})}
+        </div>
       <TeamForm/>
+      <div></div>
     </div>
   );
 }
