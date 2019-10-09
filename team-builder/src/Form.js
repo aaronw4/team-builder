@@ -10,7 +10,7 @@ const TeamForm = props => {
 
     const hitSubmit = e => {
         e.preventDefault();
-        props.addMemeber(newMember);
+        props.addMember(newMember);
         setNewMember({name:'', email:'', role:''});
     };
 
@@ -44,6 +44,8 @@ const TeamForm = props => {
                 type='text'
                 onChange={addList}
             />
+            <br></br>
+            <button className='button' type='submit'>Add Member</button>
         </form>
         </div>
     )

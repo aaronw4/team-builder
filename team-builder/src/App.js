@@ -21,6 +21,16 @@ function App() {
     }
   ])
 
+  const addMember = info => {
+    const newMember = {
+      name: info.name,
+      email: info.email,
+      role: info.role
+    };
+
+    setTeam([...team, newMember]);
+  }
+
   return (
     <div className="App"> 
       <div></div>
@@ -35,7 +45,7 @@ function App() {
             </div>
           )})}
         </div>
-      <TeamForm/>
+      <TeamForm addMember={addMember}/>
       <div></div>
     </div>
   );
