@@ -32,7 +32,7 @@ const EditTeamForm = props => {
                 className='input'
             />
             <br></br>
-            <label htmlFor='email'>email: </label>
+            <label htmlFor='email'>email: &nbsp;</label>
             <input
                 id='email'
                 value={newInfo.email}
@@ -42,7 +42,7 @@ const EditTeamForm = props => {
                 className='input'
             />
             <br></br>
-            <label htmlFor='role'>role: </label>
+            <label htmlFor='role'>role: &nbsp;&nbsp;&nbsp;</label>
             <input
                 id='role'
                 value={newInfo.role}
