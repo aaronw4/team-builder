@@ -19,9 +19,9 @@ const EditTeamForm = props => {
     };
 
     return (
-        <div>
-        <h3>Edit Member Form</h3>
-        <form onSubmit={hitSubmit}>
+        <div className='editCont'>
+        <h2 className='title'>Edit Member Form</h2>
+        <form onSubmit={hitSubmit} className='edit'>
             <label htmlFor='name'>Name: </label>
             <input
                 id='name'
@@ -29,6 +29,7 @@ const EditTeamForm = props => {
                 name='name'
                 type='text'
                 onChange={addList}
+                className='input'
             />
             <br></br>
             <label htmlFor='email'>email: </label>
@@ -37,7 +38,8 @@ const EditTeamForm = props => {
                 value={newInfo.email}
                 name='email'
                 type='text'
-                onChange={addList}
+                onChange={addList}                
+                className='input'
             />
             <br></br>
             <label htmlFor='role'>role: </label>
@@ -47,6 +49,7 @@ const EditTeamForm = props => {
                 name='role'
                 type='text'
                 onChange={addList}
+                className='input'
             />
             <br></br>
             <button className='button' type='submit'>Submit Changes</button>
