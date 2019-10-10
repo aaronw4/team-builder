@@ -15,9 +15,9 @@ const TeamForm = props => {
     };
 
     return (
-        <div>
-        <h3>Add New Member Form</h3>
-        <form onSubmit={hitSubmit}>
+        <div className='formCont'>
+        <h2 className='title'>Add New Member Form</h2>
+        <form onSubmit={hitSubmit} className='form'>
             <label htmlFor='name'>Name: </label>
             <input
                 id='name'
@@ -25,24 +25,27 @@ const TeamForm = props => {
                 name='name'
                 type='text'
                 onChange={addList}
+                className='input'
             />
             <br></br>
-            <label htmlFor='email'>email: </label>
+            <label htmlFor='email'>email: &nbsp;</label>
             <input
                 id='email'
                 value={newMember.email}
                 name='email'
                 type='text'
                 onChange={addList}
+                className='input'
             />
             <br></br>
-            <label htmlFor='role'>role: </label>
+            <label htmlFor='role'>role: &nbsp;&nbsp;&nbsp;</label>
             <input
                 id='role'
                 value={newMember.role}
                 name='role'
                 type='text'
                 onChange={addList}
+                className='input'
             />
             <br></br>
             <button className='button' type='submit'>Add Member</button>
