@@ -48,8 +48,18 @@ function App() {
     setMember(arr);
   };
 
-  const editMember = () => {
-    
+  const editMember = info => {
+    console.log(info);
+    let newArray = team.filter(i => i.id !== info.id)
+    console.log(newArray);
+    const update = {
+      name: info.name,
+      email: info.email,
+      role: info.role,
+      id: team.length
+    };
+    setTeam([...newArray, update]);
+    setEdit(false);    
   }
 
   const cancelEdit = () => {

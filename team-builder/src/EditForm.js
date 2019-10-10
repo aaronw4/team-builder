@@ -2,17 +2,20 @@ import React, { useState } from "react";
 
 const EditTeamForm = props => {
 
-    const [newInfo, setNewInfo] = useState({name:'', email:'', role:'', id:null});
+    const [newInfo, setNewInfo] = useState(props.member);
     
 
     const addList = e => {
-        setNewInfo({...newInfo, [e.target.name]: e.target.value })
+        setNewInfo({...newInfo, [e.target.name]: e.target.value 
+        })
     };
 
+    console.log(props.member)
     const hitSubmit = e => {
+        let newObj = newInfo;
+        let newObj2 = {...newObj, id: props.member[0].id};
         e.preventDefault();
-        props.edit(newInfo);
-        setNewInfo({name:'', email:'', role:'', id:null});
+        props.edit(newObj2);
     };
 
     return (
