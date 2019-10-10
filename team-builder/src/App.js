@@ -33,7 +33,6 @@ function App() {
       id: team.length
     };
     setTeam([...team, newMember]);
-    console.log(team)
   };
 
   const [member, setMember] = useState([]);
@@ -49,9 +48,7 @@ function App() {
   };
 
   const editMember = info => {
-    console.log(info);
     let newArray = team.filter(i => i.id !== info.id)
-    console.log(newArray);
     const update = {
       name: info.name,
       email: info.email,
@@ -68,9 +65,9 @@ function App() {
   
   return (
     <div className="App"> 
-      <div></div>
-      <div>
-        <h3> Team </h3>
+      <div className='teamList'>
+        <h1 className='team'> Team </h1>
+        <div className='cards'>
           {team.map(data => {
             return(
             <div className='memberInfo'>
@@ -80,6 +77,7 @@ function App() {
               <button value={data.id} onClick={selectEdit}>Edit</button>
             </div>
           )})}
+          </div>
         </div>
       {edit === true ? <EditTeamForm cancel={cancelEdit} member={member} edit={editMember}/> : <TeamForm addMember={addMember}/>}
       <div></div>
