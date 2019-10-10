@@ -68,9 +68,9 @@ function App() {
   
   return (
     <div className="App"> 
-      <div></div>
-      <div>
-        <h3> Team </h3>
+      <div className='teamList'>
+        <h1 className='team'> Team </h1>
+        <div className='cards'>
           {team.map(data => {
             return(
             <div className='memberInfo'>
@@ -80,11 +80,13 @@ function App() {
               <button value={data.id} onClick={selectEdit}>Edit</button>
             </div>
           )})}
+          </div>
         </div>
       {edit === true ? <EditTeamForm cancel={cancelEdit} member={member} edit={editMember}/> : <TeamForm addMember={addMember}/>}
       <div></div>
     </div>
   );
 }
+
 
 export default App;
