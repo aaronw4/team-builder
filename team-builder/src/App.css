@@ -1,0 +1,63 @@
+.App {
+  display: flex;
+  justify-content: space-around;  
+}
+
+.teamList {
+  width:42%;
+  margin-top: 50px;
+}
+
+.team {
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.memberInfo {
+  line-height: 0.25;
+  margin: 20px 0;
+  background-color: #b2fcff;
+  padding: 10px;
+  font-size: 20px;
+  flex-basis: 300px;
+}
+
+.formCont {
+  margin-top: 150px;
+  padding: 10px;
+  background-color: #5edfff;
+  height: 350px;
+}
+
+.editCont {
+  margin-top: 150px;
+  padding: 10px;
+  background-color: #3e64ff;
+  height: 350px;
+}
+
+.form, .edit {
+  line-height: 3;
+  font-size: 20px;
+}
+
+.title {
+  text-align: center;
+}
+
+.input {
+  font-size: 20px;
+}
+
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  font-size: 20px;
+}
